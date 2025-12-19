@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
     <style>
         /* --- AIML DARK THEME COLORS --- */
         :root {
-            --primary: #38bdf8; /* cyan-400 */
-            --secondary: #818cf8; /* indigo-400 */
-            --accent: #f472b6; /* pink-400 */
+            --primary: #38bdf8;
+            /* cyan-400 */
+            --secondary: #818cf8;
+            /* indigo-400 */
+            --accent: #f472b6;
+            /* pink-400 */
             --bg-card: #181a20;
             --bg-section: #101014;
             --border-card: #23263a;
@@ -117,6 +121,7 @@
             justify-content: center;
             text-align: center;
         }
+
         .hero h1,
         .hero-subtitle,
         .hero p,
@@ -177,18 +182,21 @@
         .cta-button::after {
             content: '';
             position: absolute;
-            left: 50%; top: 50%;
-            width: 0; height: 0;
-            background: rgba(255,255,255,0.3);
+            left: 50%;
+            top: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
             border-radius: 100%;
             transform: translate(-50%, -50%);
-            transition: width 0.4s cubic-bezier(.4,0,.2,1), height 0.4s cubic-bezier(.4,0,.2,1), opacity 0.4s;
+            transition: width 0.4s cubic-bezier(.4, 0, .2, 1), height 0.4s cubic-bezier(.4, 0, .2, 1), opacity 0.4s;
             opacity: 0;
             pointer-events: none;
         }
 
         .cta-button:active::after {
-            width: 200px; height: 200px;
+            width: 200px;
+            height: 200px;
             opacity: 1;
             transition: 0s;
         }
@@ -219,22 +227,57 @@
             animation: float 6s ease-in-out infinite;
         }
 
-        .particle:nth-child(2) { left: 10%; animation-delay: -1s; }
-        .particle:nth-child(3) { left: 20%; animation-delay: -2s; }
-        .particle:nth-child(4) { left: 30%; animation-delay: -3s; }
-        .particle:nth-child(5) { left: 40%; animation-delay: -4s; }
-        .particle:nth-child(6) { left: 50%; animation-delay: -5s; }
-        .particle:nth-child(7) { left: 60%; animation-delay: -6s; }
-        .particle:nth-child(8) { left: 70%; animation-delay: -1.5s; }
-        .particle:nth-child(9) { left: 80%; animation-delay: -2.5s; }
-        .particle:nth-child(10) { left: 90%; animation-delay: -3.5s; }
+        .particle:nth-child(2) {
+            left: 10%;
+            animation-delay: -1s;
+        }
+
+        .particle:nth-child(3) {
+            left: 20%;
+            animation-delay: -2s;
+        }
+
+        .particle:nth-child(4) {
+            left: 30%;
+            animation-delay: -3s;
+        }
+
+        .particle:nth-child(5) {
+            left: 40%;
+            animation-delay: -4s;
+        }
+
+        .particle:nth-child(6) {
+            left: 50%;
+            animation-delay: -5s;
+        }
+
+        .particle:nth-child(7) {
+            left: 60%;
+            animation-delay: -6s;
+        }
+
+        .particle:nth-child(8) {
+            left: 70%;
+            animation-delay: -1.5s;
+        }
+
+        .particle:nth-child(9) {
+            left: 80%;
+            animation-delay: -2.5s;
+        }
+
+        .particle:nth-child(10) {
+            left: 90%;
+            animation-delay: -3.5s;
+        }
 
         /* --- SECTION BACKGROUNDS --- */
         section {
             background: var(--bg-section);
             border-radius: 18px;
             margin-bottom: 2.5rem;
-            box-shadow: 0 4px 32px 0 rgba(30,41,59,0.08);
+            box-shadow: 0 4px 32px 0 rgba(30, 41, 59, 0.08);
             padding: 4rem 0 3rem 0;
             position: relative;
         }
@@ -255,17 +298,20 @@
             letter-spacing: 1.5px;
             text-shadow: 0 2px 16px #38bdf844, 0 1px 8px #f472b644;
         }
+
         .section-title .section-icon {
             font-size: 1.5em;
             color: var(--accent);
             vertical-align: middle;
             filter: drop-shadow(0 0 6px #38bdf8cc);
         }
+
         .section-title::after {
             content: '';
             display: block;
             position: absolute;
-            left: 50%; bottom: -10px;
+            left: 50%;
+            bottom: -10px;
             width: 60px;
             height: 3px;
             background: var(--accent);
@@ -285,20 +331,23 @@
             gap: 2.5rem;
             text-align: center;
         }
+
         .about-image {
             margin-bottom: 1.5rem;
         }
+
         .about-image img {
             width: 100%;
             max-width: 300px;
             border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
             display: block;
             margin: 0 auto;
             height: auto;
             object-fit: cover;
             background: #222;
         }
+
         /* Remove hiding of broken image/alt text for debugging */
         /* .about-image img:invalid, .about-image img:not([src]) {
             visibility: hidden;
@@ -344,30 +393,33 @@
             background: var(--section-title-bg);
             border-radius: 14px;
             padding: 2.5rem 1.5rem;
-            box-shadow: 0 2px 12px rgba(30,41,59,0.08);
+            box-shadow: 0 2px 12px rgba(30, 41, 59, 0.08);
             position: relative;
             overflow: hidden;
         }
+
         /* Subtle grid background for technical feel */
         .skills-section::before {
             content: '';
             position: absolute;
             inset: 0;
             background: repeating-linear-gradient(90deg, #232b3b22 0 1px, transparent 1px 40px),
-                        repeating-linear-gradient(180deg, #232b3b22 0 1px, transparent 1px 40px);
+                repeating-linear-gradient(180deg, #232b3b22 0 1px, transparent 1px 40px);
             pointer-events: none;
             z-index: 0;
         }
+
         .skills-category {
             background: var(--bg-card);
             border: 1px solid var(--border-card);
             border-radius: 12px;
             padding: 1.2rem 1rem 1.2rem 1.2rem;
-            box-shadow: 0 1px 8px rgba(30,41,59,0.06);
+            box-shadow: 0 1px 8px rgba(30, 41, 59, 0.06);
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
         }
+
         .skills-category h4 {
             color: var(--primary);
             font-size: 1.08rem;
@@ -377,11 +429,13 @@
             align-items: center;
             gap: 0.5rem;
         }
+
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 0.6rem;
         }
+
         .skill-tag {
             padding: 0.4rem 1rem;
             background: var(--tag-bg);
@@ -395,6 +449,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .skill-tag::after {
             content: '';
             position: absolute;
@@ -404,16 +459,19 @@
             height: 100%;
             background: var(--ai-gradient);
             opacity: 0.08;
-            transition: left 0.4s cubic-bezier(.4,0,.2,1);
+            transition: left 0.4s cubic-bezier(.4, 0, .2, 1);
             z-index: 0;
         }
+
         .skill-tag:hover::after {
             left: 0;
         }
+
         .skill-tag span {
             position: relative;
             z-index: 1;
         }
+
         .skill-tag:hover {
             background: var(--tag-hover-bg);
             color: var(--tag-hover-text);
@@ -426,6 +484,7 @@
             position: relative;
             padding-left: 2rem;
         }
+
         .education-timeline::before {
             content: '';
             position: absolute;
@@ -436,6 +495,7 @@
             background: var(--primary);
             opacity: 0.15;
         }
+
         .education-item {
             background: var(--bg-card);
             border: 1.5px solid var(--border-card);
@@ -443,14 +503,16 @@
             padding: 1.7rem 1.5rem 1.5rem 1.5rem;
             margin-left: 2rem;
             margin-bottom: 2.5rem;
-            box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+            box-shadow: 0 2px 12px rgba(30, 41, 59, 0.07);
             position: relative;
             transition: box-shadow 0.2s, border-color 0.2s;
         }
+
         .education-item:hover {
             border-color: var(--primary);
-            box-shadow: 0 8px 24px 0 rgba(37,99,235,0.13);
+            box-shadow: 0 8px 24px 0 rgba(37, 99, 235, 0.13);
         }
+
         .education-item::before {
             content: '🎓';
             position: absolute;
@@ -467,6 +529,7 @@
             border: 2px solid var(--primary);
             color: var(--primary);
         }
+
         .education-period {
             color: var(--accent);
             font-weight: 600;
@@ -602,21 +665,24 @@
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2rem;
         }
+
         .project-card {
             background: var(--bg-card);
             border: 1.5px solid var(--border-card);
             border-radius: 16px;
             padding: 1.7rem 1.5rem 1.5rem 1.5rem;
-            box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+            box-shadow: 0 2px 12px rgba(30, 41, 59, 0.07);
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.2s, border-color 0.2s;
         }
+
         .project-card:hover {
             border-color: var(--primary);
-            box-shadow: 0 8px 24px 0 rgba(37,99,235,0.13);
+            box-shadow: 0 8px 24px 0 rgba(37, 99, 235, 0.13);
             transform: translateY(-7px) scale(1.025);
         }
+
         .project-card h3 {
             font-size: 1.18rem;
             margin-bottom: 0.7rem;
@@ -627,11 +693,13 @@
             align-items: center;
             gap: 0.5rem;
         }
+
         .project-card h3::before {
             content: '🛠️';
             font-size: 1.1em;
             color: var(--accent);
         }
+
         .project-card p {
             opacity: 0.93;
             margin-bottom: 1.1rem;
@@ -639,11 +707,13 @@
             font-size: 1.03rem;
             color: #cbd5e1;
         }
+
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
+
         .tech-tag {
             padding: 0.35rem 1rem;
             background: var(--tag-bg);
@@ -655,12 +725,14 @@
             box-shadow: none;
             transition: background 0.2s, color 0.2s, box-shadow 0.2s;
         }
+
         .tech-tag:hover {
             background: var(--tag-hover-bg);
             color: var(--tag-hover-text);
             border-color: var(--primary);
             box-shadow: 0 2px 12px #2563eb33;
         }
+
         .project-impact {
             margin-top: 1rem;
             padding: 0.8rem 1rem;
@@ -670,6 +742,7 @@
             font-size: 0.97rem;
             color: #a5b4fc;
         }
+
         .project-impact strong {
             color: var(--primary);
         }
@@ -688,7 +761,7 @@
             border-radius: 18px;
             padding: 2.2rem 1.5rem 1.7rem 1.5rem;
             text-align: center;
-            box-shadow: 0 2px 16px 0 rgba(51,65,85,0.12), 0 1.5px 8px 0 rgba(71,85,105,0.08);
+            box-shadow: 0 2px 16px 0 rgba(51, 65, 85, 0.12), 0 1.5px 8px 0 rgba(71, 85, 105, 0.08);
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s, background 0.3s;
@@ -706,7 +779,7 @@
             animation: border-rotate 8s linear infinite;
         }
 
-        .achievement-card > * {
+        .achievement-card>* {
             position: relative;
             z-index: 1;
         }
@@ -714,7 +787,7 @@
         .achievement-card:hover {
             border-color: #334155;
             background: rgba(36, 37, 54, 0.97);
-            box-shadow: 0 8px 24px 0 rgba(51,65,85,0.15), 0 2px 8px 0 rgba(71,85,105,0.10);
+            box-shadow: 0 8px 24px 0 rgba(51, 65, 85, 0.15), 0 2px 8px 0 rgba(71, 85, 105, 0.10);
             transform: translateY(-7px) scale(1.02);
         }
 
@@ -855,21 +928,24 @@
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2rem;
         }
+
         .project-card {
             background: var(--bg-card);
             border: 1.5px solid var(--border-card);
             border-radius: 16px;
             padding: 1.7rem 1.5rem 1.5rem 1.5rem;
-            box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+            box-shadow: 0 2px 12px rgba(30, 41, 59, 0.07);
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.2s, border-color 0.2s;
         }
+
         .project-card:hover {
             border-color: var(--primary);
-            box-shadow: 0 8px 24px 0 rgba(37,99,235,0.13);
+            box-shadow: 0 8px 24px 0 rgba(37, 99, 235, 0.13);
             transform: translateY(-7px) scale(1.025);
         }
+
         .project-card h3 {
             font-size: 1.18rem;
             margin-bottom: 0.7rem;
@@ -880,11 +956,13 @@
             align-items: center;
             gap: 0.5rem;
         }
+
         .project-card h3::before {
             content: '🛠️';
             font-size: 1.1em;
             color: var(--accent);
         }
+
         .project-card p {
             opacity: 0.93;
             margin-bottom: 1.1rem;
@@ -892,11 +970,13 @@
             font-size: 1.03rem;
             color: #cbd5e1;
         }
+
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
+
         .tech-tag {
             padding: 0.35rem 1rem;
             background: var(--tag-bg);
@@ -908,12 +988,14 @@
             box-shadow: none;
             transition: background 0.2s, color 0.2s, box-shadow 0.2s;
         }
+
         .tech-tag:hover {
             background: var(--tag-hover-bg);
             color: var(--tag-hover-text);
             border-color: var(--primary);
             box-shadow: 0 2px 12px #2563eb33;
         }
+
         .project-impact {
             margin-top: 1rem;
             padding: 0.8rem 1rem;
@@ -923,6 +1005,7 @@
             font-size: 0.97rem;
             color: #a5b4fc;
         }
+
         .project-impact strong {
             color: var(--primary);
         }
@@ -941,7 +1024,7 @@
             border-radius: 18px;
             padding: 2.2rem 1.5rem 1.7rem 1.5rem;
             text-align: center;
-            box-shadow: 0 2px 16px 0 rgba(51,65,85,0.12), 0 1.5px 8px 0 rgba(71,85,105,0.08);
+            box-shadow: 0 2px 16px 0 rgba(51, 65, 85, 0.12), 0 1.5px 8px 0 rgba(71, 85, 105, 0.08);
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s, background 0.3s;
@@ -959,7 +1042,7 @@
             animation: border-rotate 8s linear infinite;
         }
 
-        .achievement-card > * {
+        .achievement-card>* {
             position: relative;
             z-index: 1;
         }
@@ -967,7 +1050,7 @@
         .achievement-card:hover {
             border-color: #334155;
             background: rgba(36, 37, 54, 0.97);
-            box-shadow: 0 8px 24px 0 rgba(51,65,85,0.15), 0 2px 8px 0 rgba(71,85,105,0.10);
+            box-shadow: 0 8px 24px 0 rgba(51, 65, 85, 0.15), 0 2px 8px 0 rgba(71, 85, 105, 0.10);
             transform: translateY(-7px) scale(1.02);
         }
 
@@ -1108,21 +1191,24 @@
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2rem;
         }
+
         .project-card {
             background: var(--bg-card);
             border: 1.5px solid var(--border-card);
             border-radius: 16px;
             padding: 1.7rem 1.5rem 1.5rem 1.5rem;
-            box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+            box-shadow: 0 2px 12px rgba(30, 41, 59, 0.07);
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.2s, border-color 0.2s;
         }
+
         .project-card:hover {
             border-color: var(--primary);
-            box-shadow: 0 8px 24px 0 rgba(37,99,235,0.13);
+            box-shadow: 0 8px 24px 0 rgba(37, 99, 235, 0.13);
             transform: translateY(-7px) scale(1.025);
         }
+
         .project-card h3 {
             font-size: 1.18rem;
             margin-bottom: 0.7rem;
@@ -1133,11 +1219,13 @@
             align-items: center;
             gap: 0.5rem;
         }
+
         .project-card h3::before {
             content: '🛠️';
             font-size: 1.1em;
             color: var(--accent);
         }
+
         .project-card p {
             opacity: 0.93;
             margin-bottom: 1.1rem;
@@ -1145,11 +1233,13 @@
             font-size: 1.03rem;
             color: #cbd5e1;
         }
+
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
+
         .tech-tag {
             padding: 0.35rem 1rem;
             background: var(--tag-bg);
@@ -1161,12 +1251,14 @@
             box-shadow: none;
             transition: background 0.2s, color 0.2s, box-shadow 0.2s;
         }
+
         .tech-tag:hover {
             background: var(--tag-hover-bg);
             color: var(--tag-hover-text);
             border-color: var(--primary);
             box-shadow: 0 2px 12px #2563eb33;
         }
+
         .project-impact {
             margin-top: 1rem;
             padding: 0.8rem 1rem;
@@ -1176,6 +1268,7 @@
             font-size: 0.97rem;
             color: #a5b4fc;
         }
+
         .project-impact strong {
             color: var(--primary);
         }
@@ -1194,7 +1287,7 @@
             border-radius: 18px;
             padding: 2.2rem 1.5rem 1.7rem 1.5rem;
             text-align: center;
-            box-shadow: 0 2px 16px 0 rgba(51,65,85,0.12), 0 1.5px 8px 0 rgba(71,85,105,0.08);
+            box-shadow: 0 2px 16px 0 rgba(51, 65, 85, 0.12), 0 1.5px 8px 0 rgba(71, 85, 105, 0.08);
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s, background 0.3s;
@@ -1212,7 +1305,7 @@
             animation: border-rotate 8s linear infinite;
         }
 
-        .achievement-card > * {
+        .achievement-card>* {
             position: relative;
             z-index: 1;
         }
@@ -1220,7 +1313,7 @@
         .achievement-card:hover {
             border-color: #334155;
             background: rgba(36, 37, 54, 0.97);
-            box-shadow: 0 8px 24px 0 rgba(51,65,85,0.15), 0 2px 8px 0 rgba(71,85,105,0.10);
+            box-shadow: 0 8px 24px 0 rgba(51, 65, 85, 0.15), 0 2px 8px 0 rgba(71, 85, 105, 0.10);
             transform: translateY(-7px) scale(1.02);
         }
 
@@ -1361,21 +1454,24 @@
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2rem;
         }
+
         .project-card {
             background: var(--bg-card);
             border: 1.5px solid var(--border-card);
             border-radius: 16px;
             padding: 1.7rem 1.5rem 1.5rem 1.5rem;
-            box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+            box-shadow: 0 2px 12px rgba(30, 41, 59, 0.07);
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.2s, border-color 0.2s;
         }
+
         .project-card:hover {
             border-color: var(--primary);
-            box-shadow: 0 8px 24px 0 rgba(37,99,235,0.13);
+            box-shadow: 0 8px 24px 0 rgba(37, 99, 235, 0.13);
             transform: translateY(-7px) scale(1.025);
         }
+
         .project-card h3 {
             font-size: 1.18rem;
             margin-bottom: 0.7rem;
@@ -1386,11 +1482,13 @@
             align-items: center;
             gap: 0.5rem;
         }
+
         .project-card h3::before {
             content: '🛠️';
             font-size: 1.1em;
             color: var(--accent);
         }
+
         .project-card p {
             opacity: 0.93;
             margin-bottom: 1.1rem;
@@ -1398,11 +1496,13 @@
             font-size: 1.03rem;
             color: #cbd5e1;
         }
+
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
+
         .tech-tag {
             padding: 0.35rem 1rem;
             background: var(--tag-bg);
@@ -1414,12 +1514,14 @@
             box-shadow: none;
             transition: background 0.2s, color 0.2s, box-shadow 0.2s;
         }
+
         .tech-tag:hover {
             background: var(--tag-hover-bg);
             color: var(--tag-hover-text);
             border-color: var(--primary);
             box-shadow: 0 2px 12px #2563eb33;
         }
+
         .project-impact {
             margin-top: 1rem;
             padding: 0.8rem 1rem;
@@ -1429,6 +1531,7 @@
             font-size: 0.97rem;
             color: #a5b4fc;
         }
+
         .project-impact strong {
             color: var(--primary);
         }
@@ -1447,7 +1550,7 @@
             border-radius: 18px;
             padding: 2.2rem 1.5rem 1.7rem 1.5rem;
             text-align: center;
-            box-shadow: 0 2px 16px 0 rgba(51,65,85,0.12), 0 1.5px 8px 0 rgba(71,85,105,0.08);
+            box-shadow: 0 2px 16px 0 rgba(51, 65, 85, 0.12), 0 1.5px 8px 0 rgba(71, 85, 105, 0.08);
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s, background 0.3s;
@@ -1465,7 +1568,7 @@
             animation: border-rotate 8s linear infinite;
         }
 
-        .achievement-card > * {
+        .achievement-card>* {
             position: relative;
             z-index: 1;
         }
@@ -1473,7 +1576,7 @@
         .achievement-card:hover {
             border-color: #334155;
             background: rgba(36, 37, 54, 0.97);
-            box-shadow: 0 8px 24px 0 rgba(51,65,85,0.15), 0 2px 8px 0 rgba(71,85,105,0.10);
+            box-shadow: 0 8px 24px 0 rgba(51, 65, 85, 0.15), 0 2px 8px 0 rgba(71, 85, 105, 0.10);
             transform: translateY(-7px) scale(1.02);
         }
 
@@ -1614,21 +1717,24 @@
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2rem;
         }
+
         .project-card {
             background: var(--bg-card);
             border: 1.5px solid var(--border-card);
             border-radius: 16px;
             padding: 1.7rem 1.5rem 1.5rem 1.5rem;
-            box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+            box-shadow: 0 2px 12px rgba(30, 41, 59, 0.07);
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.2s, border-color 0.2s;
         }
+
         .project-card:hover {
             border-color: var(--primary);
-            box-shadow: 0 8px 24px 0 rgba(37,99,235,0.13);
+            box-shadow: 0 8px 24px 0 rgba(37, 99, 235, 0.13);
             transform: translateY(-7px) scale(1.025);
         }
+
         .project-card h3 {
             font-size: 1.18rem;
             margin-bottom: 0.7rem;
@@ -1639,11 +1745,13 @@
             align-items: center;
             gap: 0.5rem;
         }
+
         .project-card h3::before {
             content: '🛠️';
             font-size: 1.1em;
             color: var(--accent);
         }
+
         .project-card p {
             opacity: 0.93;
             margin-bottom: 1.1rem;
@@ -1651,11 +1759,13 @@
             font-size: 1.03rem;
             color: #cbd5e1;
         }
+
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
+
         .tech-tag {
             padding: 0.35rem 1rem;
             background: var(--tag-bg);
@@ -1667,12 +1777,14 @@
             box-shadow: none;
             transition: background 0.2s, color 0.2s, box-shadow 0.2s;
         }
+
         .tech-tag:hover {
             background: var(--tag-hover-bg);
             color: var(--tag-hover-text);
             border-color: var(--primary);
             box-shadow: 0 2px 12px #2563eb33;
         }
+
         .project-impact {
             margin-top: 1rem;
             padding: 0.8rem 1rem;
@@ -1682,6 +1794,7 @@
             font-size: 0.97rem;
             color: #a5b4fc;
         }
+
         .project-impact strong {
             color: var(--primary);
         }
@@ -1700,7 +1813,7 @@
             border-radius: 18px;
             padding: 2.2rem 1.5rem 1.7rem 1.5rem;
             text-align: center;
-            box-shadow: 0 2px 16px 0 rgba(51,65,85,0.12), 0 1.5px 8px 0 rgba(71,85,105,0.08);
+            box-shadow: 0 2px 16px 0 rgba(51, 65, 85, 0.12), 0 1.5px 8px 0 rgba(71, 85, 105, 0.08);
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s, background 0.3s;
@@ -1718,7 +1831,7 @@
             animation: border-rotate 8s linear infinite;
         }
 
-        .achievement-card > * {
+        .achievement-card>* {
             position: relative;
             z-index: 1;
         }
@@ -1726,7 +1839,7 @@
         .achievement-card:hover {
             border-color: #334155;
             background: rgba(36, 37, 54, 0.97);
-            box-shadow: 0 8px 24px 0 rgba(51,65,85,0.15), 0 2px 8px 0 rgba(71,85,105,0.10);
+            box-shadow: 0 8px 24px 0 rgba(51, 65, 85, 0.15), 0 2px 8px 0 rgba(71, 85, 105, 0.10);
             transform: translateY(-7px) scale(1.02);
         }
 
@@ -1867,21 +1980,24 @@
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2rem;
         }
+
         .project-card {
             background: var(--bg-card);
             border: 1.5px solid var(--border-card);
             border-radius: 16px;
             padding: 1.7rem 1.5rem 1.5rem 1.5rem;
-            box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+            box-shadow: 0 2px 12px rgba(30, 41, 59, 0.07);
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.2s, border-color 0.2s;
         }
+
         .project-card:hover {
             border-color: var(--primary);
-            box-shadow: 0 8px 24px 0 rgba(37,99,235,0.13);
+            box-shadow: 0 8px 24px 0 rgba(37, 99, 235, 0.13);
             transform: translateY(-7px) scale(1.025);
         }
+
         .project-card h3 {
             font-size: 1.18rem;
             margin-bottom: 0.7rem;
@@ -1892,11 +2008,13 @@
             align-items: center;
             gap: 0.5rem;
         }
+
         .project-card h3::before {
             content: '🛠️';
             font-size: 1.1em;
             color: var(--accent);
         }
+
         .project-card p {
             opacity: 0.93;
             margin-bottom: 1.1rem;
@@ -1904,11 +2022,13 @@
             font-size: 1.03rem;
             color: #cbd5e1;
         }
+
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
+
         .tech-tag {
             padding: 0.35rem 1rem;
             background: var(--tag-bg);
@@ -1920,12 +2040,14 @@
             box-shadow: none;
             transition: background 0.2s, color 0.2s, box-shadow 0.2s;
         }
+
         .tech-tag:hover {
             background: var(--tag-hover-bg);
             color: var(--tag-hover-text);
             border-color: var(--primary);
             box-shadow: 0 2px 12px #2563eb33;
         }
+
         .project-impact {
             margin-top: 1rem;
             padding: 0.8rem 1rem;
@@ -1935,6 +2057,7 @@
             font-size: 0.97rem;
             color: #a5b4fc;
         }
+
         .project-impact strong {
             color: var(--primary);
         }
@@ -1953,7 +2076,7 @@
             border-radius: 18px;
             padding: 2.2rem 1.5rem 1.7rem 1.5rem;
             text-align: center;
-            box-shadow: 0 2px 16px 0 rgba(51,65,85,0.12), 0 1.5px 8px 0 rgba(71,85,105,0.08);
+            box-shadow: 0 2px 16px 0 rgba(51, 65, 85, 0.12), 0 1.5px 8px 0 rgba(71, 85, 105, 0.08);
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s, background 0.3s;
@@ -1971,7 +2094,7 @@
             animation: border-rotate 8s linear infinite;
         }
 
-        .achievement-card > * {
+        .achievement-card>* {
             position: relative;
             z-index: 1;
         }
@@ -1979,7 +2102,7 @@
         .achievement-card:hover {
             border-color: #334155;
             background: rgba(36, 37, 54, 0.97);
-            box-shadow: 0 8px 24px 0 rgba(51,65,85,0.15), 0 2px 8px 0 rgba(71,85,105,0.10);
+            box-shadow: 0 8px 24px 0 rgba(51, 65, 85, 0.15), 0 2px 8px 0 rgba(71, 85, 105, 0.10);
             transform: translateY(-7px) scale(1.02);
         }
 
@@ -2119,31 +2242,39 @@
             .skills-section {
                 padding: 1.2rem 0.5rem;
             }
+
             .skills-category {
                 padding: 1rem 0.7rem;
             }
+
             .projects-grid {
                 grid-template-columns: 1fr;
             }
         }
+
         @media (max-width: 600px) {
             .container {
                 padding: 0 5px;
             }
+
             .about-content {
                 gap: 1rem;
             }
+
             .about-image {
                 margin-bottom: 1rem;
             }
         }
+
         @media (max-width: 400px) {
             .about-image img {
                 max-width: 120px;
             }
+
             .hero h1 {
                 font-size: 1rem;
             }
+
             .section-title {
                 font-size: 1rem;
             }
@@ -2179,14 +2310,17 @@
             justify-content: center;
             transition: box-shadow 0.2s;
         }
+
         #batman-chatbot-btn:hover {
             box-shadow: 0 8px 32px #000c, 0 0 0 6px #facc15;
         }
+
         #batman-chatbot-btn svg {
             width: 38px;
             height: 38px;
             display: block;
         }
+
         #batman-chatbot-window {
             position: fixed;
             bottom: 110px;
@@ -2202,12 +2336,21 @@
             z-index: 9999;
             overflow: hidden;
             border: 2px solid #facc15;
-            animation: chatbot-pop 0.25s cubic-bezier(.4,0,.2,1);
+            animation: chatbot-pop 0.25s cubic-bezier(.4, 0, .2, 1);
         }
+
         @keyframes chatbot-pop {
-            0% { transform: scale(0.7) translateY(40px); opacity: 0; }
-            100% { transform: scale(1) translateY(0); opacity: 1; }
+            0% {
+                transform: scale(0.7) translateY(40px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
         }
+
         #batman-chatbot-header {
             background: #23263a;
             color: #facc15;
@@ -2219,10 +2362,12 @@
             gap: 0.7rem;
             border-bottom: 1.5px solid #facc15;
         }
+
         #batman-chatbot-header svg {
             width: 28px;
             height: 28px;
         }
+
         #batman-chatbot-close {
             margin-left: auto;
             background: none;
@@ -2232,9 +2377,11 @@
             cursor: pointer;
             transition: color 0.2s;
         }
+
         #batman-chatbot-close:hover {
             color: #fff200;
         }
+
         #batman-chatbot-messages {
             flex: 1;
             padding: 1rem;
@@ -2244,6 +2391,7 @@
             flex-direction: column;
             gap: 0.7rem;
         }
+
         .batman-msg {
             background: #23263a;
             color: #facc15;
@@ -2254,6 +2402,7 @@
             font-size: 1rem;
             box-shadow: 0 2px 8px #0002;
         }
+
         .user-msg {
             background: #facc15;
             color: #23263a;
@@ -2265,12 +2414,14 @@
             font-weight: 500;
             box-shadow: 0 2px 8px #0002;
         }
+
         #batman-chatbot-input-row {
             display: flex;
             border-top: 1.5px solid #facc15;
             background: #23263a;
             padding: 0.7rem;
         }
+
         #batman-chatbot-input {
             flex: 1;
             border: none;
@@ -2281,6 +2432,7 @@
             color: #facc15;
             outline: none;
         }
+
         #batman-chatbot-send {
             background: #facc15;
             color: #23263a;
@@ -2293,9 +2445,11 @@
             cursor: pointer;
             transition: background 0.2s;
         }
+
         #batman-chatbot-send:hover {
             background: #ffe066;
         }
+
         @media (max-width: 500px) {
             #batman-chatbot-window {
                 width: 98vw;
@@ -2306,6 +2460,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -2329,7 +2484,9 @@
                 <div class="hero-content">
                     <h1>Kathir Ezhil A</h1>
                     <div class="hero-subtitle">Data Science & EEE Student</div>
-                    <p>Third-Year Electrical & Electronics Engineering student at SSN College with a passion for Data Science. Currently pursuing dual degrees with exceptional academic performance and hands-on experience in Python, Machine Learning, and circuit design.</p>
+                    <p>Third-Year Electrical & Electronics Engineering student at SSN College with a passion for Data
+                        Science. Currently pursuing dual degrees with exceptional academic performance and hands-on
+                        experience in Python, Machine Learning, and circuit design.</p>
                     <div class="cta-buttons">
                         <a href="#projects" class="cta-button">View Projects</a>
                         <a href="#contact" class="cta-button secondary">Get In Touch</a>
@@ -2353,18 +2510,24 @@
                 <div class="about-content">
                     <div class="about-image">
                         <img id="profile-img" src="user_image.jpg" alt="Kathir Ezhil A Portrait"
-                             style="width:100%;max-width:300px;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.15);display:block;background:#333;border:3px solid #fbbf24;"
-                             onerror="this.onerror=null;this.src='https://via.placeholder.com/300x400?text=No+Image';document.getElementById('img-error-msg').style.display='block';">
-                        <div id="img-error-msg" style="display:none;color:#fff;background:#fbbf24;padding:8px 12px;margin-top:8px;font-size:1rem;border-radius:8px;">
-                            <b>Image not found!</b> Please ensure <b>user_image.jpg</b> is in the same folder as this HTML file.
+                            style="width:100%;max-width:300px;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.15);display:block;background:#333;border:3px solid #fbbf24;"
+                            onerror="this.onerror=null;this.src='https://via.placeholder.com/300x400?text=No+Image';document.getElementById('img-error-msg').style.display='block';">
+                        <div id="img-error-msg"
+                            style="display:none;color:#fff;background:#fbbf24;padding:8px 12px;margin-top:8px;font-size:1rem;border-radius:8px;">
+                            <b>Image not found!</b> Please ensure <b>user_image.jpg</b> is in the same folder as this
+                            HTML file.
                         </div>
                     </div>
                     <div>
                         <p class="about-text">
-                            I'm a motivated and fast-learning Data Science enthusiast with a strong dual academic background in Electrical & Electronics Engineering and Data Science. Currently maintaining excellent academic performance with a CGPA of 9.565 at SSN College and 9.7 at IIT Madras.
+                            I'm a motivated and fast-learning Data Science enthusiast with a strong dual academic
+                            background in Electrical & Electronics Engineering and Data Science. Currently maintaining
+                            excellent academic performance with a CGPA of 9.565 at SSN College and 9.7 at IIT Madras.
                         </p>
                         <p class="about-text">
-                            My passion lies in applying AI/ML solutions to solve real-world problems, combining my engineering foundation with advanced data science skills. I'm actively involved in sports (athletics) and community service, which has developed my leadership and teamwork abilities.
+                            My passion lies in applying AI/ML solutions to solve real-world problems, combining my
+                            engineering foundation with advanced data science skills. I'm actively involved in sports
+                            (athletics) and community service, which has developed my leadership and teamwork abilities.
                         </p>
                         <div class="stats-grid">
                             <div class="stat-item">
@@ -2377,7 +2540,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -2385,7 +2548,8 @@
         <section id="skills" class="fade-in slide-in-right">
             <div class="container">
                 <h2 class="section-title"><span class="section-icon">💡</span>Skills</h2>
-                <div class="skills-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+                <div class="skills-section"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
                     <div class="skills-category">
                         <h4><span>🖥️</span> Programming</h4>
                         <div class="skills">
@@ -2398,6 +2562,8 @@
                             <span class="skill-tag">CSS</span>
                             <span class="skill-tag">DSA in Python</span>
                             <span class="skill-tag">DSA in C++</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
                         </div>
                     </div>
                     <div class="skills-category">
@@ -2405,6 +2571,8 @@
                         <div class="skills">
                             <span class="skill-tag">Object-Oriented Programming (OOP)</span>
                             <span class="skill-tag">Web Application Development (Flask)</span>
+                            <span class="skill-tag">Mobile App Development (Flutter)</span>
+                            <span class="skill-tag">Database Management (SQLite, Firebase)</span>
                         </div>
                     </div>
                     <div class="skills-category">
@@ -2435,6 +2603,10 @@
                             <span class="skill-tag">Data Analysis</span>
                             <span class="skill-tag">Statistical Data Analysis</span>
                             <span class="skill-tag">Data Science</span>
+                            <span class="skill-tag">Jupyter Notebook</span>
+                            <span class="skill-tag">Google Colab</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">Pandas & NumPy</span>
                         </div>
                     </div>
                     <div class="skills-category">
@@ -2461,7 +2633,9 @@
                         <h3 class="education-title">Bachelor of Engineering</h3>
                         <div class="education-institution">SSN College of Engineering, Chennai</div>
                         <p class="education-description">
-                            Electrical and Electronics Engineering student with exceptional academic performance. Strong foundation in circuit analysis, problem-solving, and practical applications. Actively involved in sports (athletics) and community service.
+                            Electrical and Electronics Engineering student with exceptional academic performance. Strong
+                            foundation in circuit analysis, problem-solving, and practical applications. Actively
+                            involved in sports (athletics) and community service.
                         </p>
                         <span class="cgpa">CGPA: 9.565</span>
                         <span class="cgpa">🏆 Two Gold Medals for Academic Excellence</span>
@@ -2472,7 +2646,9 @@
                         <h3 class="education-title">BS Degree in Data Science and Applications</h3>
                         <div class="education-institution">Indian Institute of Technology, Madras</div>
                         <p class="education-description">
-                            Comprehensive Data Science program focusing on Python, data analysis, statistics, and machine learning. Currently pursuing Diploma Level in Programming and Data Science with focus on applying analytical and programming skills to solve real-world problems.
+                            Comprehensive Data Science program focusing on Python, data analysis, statistics, and
+                            machine learning. Currently pursuing Diploma Level in Programming and Data Science with
+                            focus on applying analytical and programming skills to solve real-world problems.
                         </p>
                         <span class="cgpa">Foundation Level CGPA: 9.7</span>
                     </div>
@@ -2489,7 +2665,9 @@
                         <h3 class="experience-title">Data Science Student Researcher</h3>
                         <div class="experience-company">IIT Madras - Online Degree Program</div>
                         <div class="experience-description">
-                            <p>Conducting advanced research in machine learning algorithms and statistical data analysis. Working on real-world datasets to develop predictive models and derive actionable insights for various domains.</p>
+                            <p>Conducting advanced research in machine learning algorithms and statistical data
+                                analysis. Working on real-world datasets to develop predictive models and derive
+                                actionable insights for various domains.</p>
                             <ul class="experience-highlights">
                                 <li>Achieved Foundation Level CGPA of 9.7, ranking among top performers</li>
                                 <li>Completed advanced coursework in Statistical Methods and Programming</li>
@@ -2504,7 +2682,9 @@
                         <h3 class="experience-title">Student Athlete & Team Captain</h3>
                         <div class="experience-company">SSN College of Engineering</div>
                         <div class="experience-description">
-                            <p>Leading college athletics team while maintaining academic excellence. Demonstrating exceptional time management and leadership skills by balancing dual degree programs with sports commitments.</p>
+                            <p>Leading college athletics team while maintaining academic excellence. Demonstrating
+                                exceptional time management and leadership skills by balancing dual degree programs with
+                                sports commitments.</p>
                             <ul class="experience-highlights">
                                 <li>Inter-University and Zonal level athletics medalist</li>
                                 <li>Sports Captain with proven leadership and team management skills</li>
@@ -2519,7 +2699,9 @@
                         <h3 class="experience-title">IEEE Student Member & Technical Contributor</h3>
                         <div class="experience-company">IEEE Circuits and Systems Society (CASS)</div>
                         <div class="experience-description">
-                            <p>Active member contributing to technical discussions and workshops in circuits and systems. Participating in research presentations and collaborative projects within the engineering community.</p>
+                            <p>Active member contributing to technical discussions and workshops in circuits and
+                                systems. Participating in research presentations and collaborative projects within the
+                                engineering community.</p>
                             <ul class="experience-highlights">
                                 <li>Regular participant in IEEE technical workshops and seminars</li>
                                 <li>Contributed to discussions on digital logic design and control systems</li>
@@ -2534,7 +2716,8 @@
                         <h3 class="experience-title">NSS Volunteer</h3>
                         <div class="experience-company">National Service Scheme</div>
                         <div class="experience-description">
-                            <p>Actively involved in community outreach programs, contributing to social causes while developing interpersonal skills and social awareness.</p>
+                            <p>Actively involved in community outreach programs, contributing to social causes while
+                                developing interpersonal skills and social awareness.</p>
                             <ul class="experience-highlights">
                                 <li>Participated in multiple community service initiatives</li>
                                 <li>Organized and led volunteer activities in local communities</li>
@@ -2553,7 +2736,9 @@
                 <div class="projects-grid">
                     <div class="project-card">
                         <h3>Line Follower Bot</h3>
-                        <p>Built a compact line-following robot using Arduino Nano, IR sensors, and Li-ion battery with LM2596 voltage regulation. Designed custom chassis and optimized for stable, level movement on track with precise sensor calibration.</p>
+                        <p>Built a compact line-following robot using Arduino Nano, IR sensors, and Li-ion battery with
+                            LM2596 voltage regulation. Designed custom chassis and optimized for stable, level movement
+                            on track with precise sensor calibration.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Arduino Nano</span>
                             <span class="tech-tag">IR Sensors</span>
@@ -2562,12 +2747,14 @@
                             <span class="tech-tag">Robotics</span>
                         </div>
                         <div class="project-impact">
-                            <strong>Impact:</strong> Developed advanced understanding of embedded systems and autonomous navigation
+                            <strong>Impact:</strong> Developed advanced understanding of embedded systems and autonomous
+                            navigation
                         </div>
                     </div>
                     <div class="project-card">
                         <h3>Internally Funded Student Project (SSN)</h3>
-                        <p><em>[In Progress]</em> Design and comparative evaluation of winding schemes for high-efficiency induction motor for pumping applications.</p>
+                        <p><em>[In Progress]</em> Design and comparative evaluation of winding schemes for
+                            high-efficiency induction motor for pumping applications.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Induction Motor</span>
                             <span class="tech-tag">Winding Schemes</span>
@@ -2575,22 +2762,74 @@
                             <span class="tech-tag">Pumping Applications</span>
                         </div>
                         <div class="project-impact">
-                            <strong>Impact:</strong> Aims to optimize motor design for energy-efficient pumping, contributing to sustainable engineering solutions.
+                            <strong>Impact:</strong> Aims to optimize motor design for energy-efficient pumping,
+                            contributing to sustainable engineering solutions.
                         </div>
                     </div>
                     <div class="project-card">
-                        <h3>Flask Web Development Portfolio</h3>
-                        <p>Developed various web applications using Flask framework, demonstrating full-stack development skills with focus on user interface design, database integration, and backend functionality.</p>
+                        <h3>Hospital Management System (HMS)</h3>
+                        <p>Comprehensive full-stack web application for hospital management developed as IIT Madras
+                            MAD-1 individual project. Features patient management, appointment scheduling,
+                            doctor-patient interface, and complete database integration using Flask framework.</p>
                         <div class="project-tech">
+                            <span class="tech-tag">Python</span>
                             <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">SQLite</span>
                             <span class="tech-tag">HTML/CSS</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">SQLite</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Web Development</span>
+                            <span class="tech-tag">SQLAlchemy</span>
                         </div>
                         <div class="project-impact">
-                            <strong>Impact:</strong> Built responsive web applications with user authentication and data management
+                            <strong>Impact:</strong> IIT Madras MAD-1 project demonstrating full-stack development with
+                            user authentication, CRUD operations, and database management
+                        </div>
+                        <div style="margin-top:1rem;">
+                            <a href="https://github.com/KathirEzhil/HMS-app---MAD-1-project" target="_blank"
+                                style="color:var(--primary);text-decoration:none;font-weight:600;">🔗 View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>SIH 2025 - AI Internship Suggestion Portal</h3>
+                        <p>Smart India Hackathon 2025 project: AI/ML-powered internship recommendation system that
+                            provides personalized internship suggestions based on student profiles, skills, and
+                            preferences. Implemented machine learning models for intelligent matching.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Jupyter Notebook</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Google Colab</span>
+                        </div>
+                        <div class="project-impact">
+                            <strong>Impact:</strong> Smart India Hackathon 2025 submission showcasing AI/ML expertise in
+                            building intelligent career guidance systems
+                        </div>
+                        <div style="margin-top:1rem;">
+                            <a href="https://github.com/KathirEzhil/SIH-2025---AI-based-internship-suggestion-portal"
+                                target="_blank" style="color:var(--primary);text-decoration:none;font-weight:600;">🔗
+                                View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Digital Police Mobile Application</h3>
+                        <p>Cross-platform mobile application developed during internship for digital police services.
+                            Built using Flutter and Dart with Firebase backend integration for real-time data
+                            synchronization and cloud storage.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Mobile Development</span>
+                            <span class="tech-tag">Cloud Integration</span>
+                        </div>
+                        <div class="project-impact">
+                            <strong>Impact:</strong> Real-world internship project demonstrating mobile app development
+                            skills with cloud services integration
+                        </div>
+                        <div style="margin-top:1rem;">
+                            <a href="https://github.com/KathirEzhil/intern_project_Dgital_police" target="_blank"
+                                style="color:var(--primary);text-decoration:none;font-weight:600;">🔗 View on GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -2604,33 +2843,36 @@
                     <div class="achievement-card">
                         <div class="achievement-icon">🏆</div>
                         <h4 class="achievement-title">Academic Excellence</h4>
-                        <p class="achievement-description">Two Gold Medals for Academic Excellence at SSN College with CGPA 9.565</p>
+                        <p class="achievement-description">Two Gold Medals for Academic Excellence at SSN College with
+                            CGPA 9.565</p>
                     </div>
-                    
+
                     <div class="achievement-card">
                         <div class="achievement-icon">🎓</div>
                         <h4 class="achievement-title">IIT Madras Foundation</h4>
-                        <p class="achievement-description">Completed Foundation Level with CGPA 9.7 and earned Foundation Certificate</p>
+                        <p class="achievement-description">Completed Foundation Level with CGPA 9.7 and earned
+                            Foundation Certificate</p>
                     </div>
-                    
+
                     <div class="achievement-card">
                         <div class="achievement-icon">📚</div>
                         <h4 class="achievement-title">School Topper</h4>
                         <p class="achievement-description">96.6% in Class 10 and 96.4% in Class 12 (CBSE)</p>
                     </div>
-                    
+
                     <div class="achievement-card">
                         <div class="achievement-icon">🏃‍♂️</div>
                         <h4 class="achievement-title">Sports Excellence</h4>
-                        <p class="achievement-description">SSN Athletics Medalist in Inter-University and Zonal level events</p>
+                        <p class="achievement-description">SSN Athletics Medalist in Inter-University and Zonal level
+                            events</p>
                     </div>
-                    
+
                     <div class="achievement-card">
                         <div class="achievement-icon">🏀</div>
                         <h4 class="achievement-title">Sports Leadership</h4>
                         <p class="achievement-description">Sports Captain and CBSE Cluster Basketball Player</p>
                     </div>
-                    
+
                     <div class="achievement-card">
                         <div class="achievement-icon">🤝</div>
                         <h4 class="achievement-title">Community Service</h4>
@@ -2645,25 +2887,34 @@
                 <div class="contact-content" style="max-width:700px;margin:0 auto;">
                     <h2 class="section-title"><span class="section-icon">📬</span>Let's Connect</h2>
                     <p style="text-align:center;margin-bottom:2.5rem;">
-                        I'm always excited to discuss opportunities in Data Science, Machine Learning, or collaborate on innovative projects!
+                        I'm always excited to discuss opportunities in Data Science, Machine Learning, or collaborate on
+                        innovative projects!
                     </p>
-                    <div class="contact-info" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;justify-items:center;">
-                        <div class="contact-item" style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:14px;padding:1.5rem 1rem;box-shadow:0 2px 12px rgba(30,41,59,0.08);text-align:center;min-width:180px;">
+                    <div class="contact-info"
+                        style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;justify-items:center;">
+                        <div class="contact-item"
+                            style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:14px;padding:1.5rem 1rem;box-shadow:0 2px 12px rgba(30,41,59,0.08);text-align:center;min-width:180px;">
                             <div style="font-size:2rem;margin-bottom:0.5rem;">📧</div>
                             <h4 style="color:var(--primary);margin-bottom:0.3rem;">Email</h4>
-                            <a href="mailto:kathirezhil2310288@ssn.edu.in" style="color:var(--accent);text-decoration:none;font-weight:500;word-break:break-all;">kathirezhil2310288@ssn.edu.in</a>
+                            <a href="mailto:kathirezhil2310288@ssn.edu.in"
+                                style="color:var(--accent);text-decoration:none;font-weight:500;word-break:break-all;">kathirezhil2310288@ssn.edu.in</a>
                         </div>
-                        <div class="contact-item" style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:14px;padding:1.5rem 1rem;box-shadow:0 2px 12px rgba(30,41,59,0.08);text-align:center;min-width:180px;">
+                        <div class="contact-item"
+                            style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:14px;padding:1.5rem 1rem;box-shadow:0 2px 12px rgba(30,41,59,0.08);text-align:center;min-width:180px;">
                             <div style="font-size:2rem;margin-bottom:0.5rem;">📱</div>
                             <h4 style="color:var(--primary);margin-bottom:0.3rem;">Phone</h4>
-                            <a href="tel:+917550254009" style="color:var(--accent);text-decoration:none;font-weight:500;">+91 7550254009</a>
+                            <a href="tel:+917550254009"
+                                style="color:var(--accent);text-decoration:none;font-weight:500;">+91 7550254009</a>
                         </div>
-                        <div class="contact-item" style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:14px;padding:1.5rem 1rem;box-shadow:0 2px 12px rgba(30,41,59,0.08);text-align:center;min-width:180px;">
+                        <div class="contact-item"
+                            style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:14px;padding:1.5rem 1rem;box-shadow:0 2px 12px rgba(30,41,59,0.08);text-align:center;min-width:180px;">
                             <div style="font-size:2rem;margin-bottom:0.5rem;">💼</div>
                             <h4 style="color:var(--primary);margin-bottom:0.3rem;">LinkedIn</h4>
-                            <a href="https://www.linkedin.com/in/kathirezhil06" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;word-break:break-all;">linkedin.com/in/kathirezhil06</a>
+                            <a href="https://www.linkedin.com/in/kathirezhil06" target="_blank"
+                                style="color:var(--accent);text-decoration:none;font-weight:500;word-break:break-all;">linkedin.com/in/kathirezhil06</a>
                         </div>
-                        <div class="contact-item" style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:14px;padding:1.5rem 1rem;box-shadow:0 2px 12px rgba(30,41,59,0.08);text-align:center;min-width:180px;">
+                        <div class="contact-item"
+                            style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:14px;padding:1.5rem 1rem;box-shadow:0 2px 12px rgba(30,41,59,0.08);text-align:center;min-width:180px;">
                             <div style="font-size:2rem;margin-bottom:0.5rem;">📍</div>
                             <h4 style="color:var(--primary);margin-bottom:0.3rem;">Location</h4>
                             <span style="color:var(--secondary);font-weight:500;">Chennai, Tamil Nadu 600042</span>
@@ -2683,20 +2934,20 @@
     <!-- Batman Chatbot Button -->
     <button id="batman-chatbot-btn" title="Chat with Batman AI">
         <svg viewBox="0 0 64 32" fill="none">
-            <ellipse cx="32" cy="16" rx="30" ry="13" fill="#facc15" stroke="#23263a" stroke-width="2"/>
-            <path d="M10 16 Q16 8 24 16 Q32 24 40 16 Q48 8 54 16" stroke="#23263a" stroke-width="2" fill="none"/>
-            <ellipse cx="22" cy="16" rx="2" ry="3" fill="#23263a"/>
-            <ellipse cx="42" cy="16" rx="2" ry="3" fill="#23263a"/>
+            <ellipse cx="32" cy="16" rx="30" ry="13" fill="#facc15" stroke="#23263a" stroke-width="2" />
+            <path d="M10 16 Q16 8 24 16 Q32 24 40 16 Q48 8 54 16" stroke="#23263a" stroke-width="2" fill="none" />
+            <ellipse cx="22" cy="16" rx="2" ry="3" fill="#23263a" />
+            <ellipse cx="42" cy="16" rx="2" ry="3" fill="#23263a" />
         </svg>
     </button>
     <!-- Batman Chatbot Window -->
     <div id="batman-chatbot-window">
         <div id="batman-chatbot-header">
             <svg viewBox="0 0 64 32" fill="none">
-                <ellipse cx="32" cy="16" rx="30" ry="13" fill="#facc15" stroke="#23263a" stroke-width="2"/>
-                <path d="M10 16 Q16 8 24 16 Q32 24 40 16 Q48 8 54 16" stroke="#23263a" stroke-width="2" fill="none"/>
-                <ellipse cx="22" cy="16" rx="2" ry="3" fill="#23263a"/>
-                <ellipse cx="42" cy="16" rx="2" ry="3" fill="#23263a"/>
+                <ellipse cx="32" cy="16" rx="30" ry="13" fill="#facc15" stroke="#23263a" stroke-width="2" />
+                <path d="M10 16 Q16 8 24 16 Q32 24 40 16 Q48 8 54 16" stroke="#23263a" stroke-width="2" fill="none" />
+                <ellipse cx="22" cy="16" rx="2" ry="3" fill="#23263a" />
+                <ellipse cx="42" cy="16" rx="2" ry="3" fill="#23263a" />
             </svg>
             Batman AI
             <button id="batman-chatbot-close" title="Close">&times;</button>
@@ -2776,11 +3027,11 @@
 
         // Add hover effects to cards
         document.querySelectorAll('.project-card, .achievement-card, .education-item').forEach(card => {
-            card.addEventListener('mouseenter', function() {
+            card.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-10px) scale(1.02)';
             });
-            
-            card.addEventListener('mouseleave', function() {
+
+            card.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateY(0) scale(1)';
             });
         });
@@ -2789,7 +3040,7 @@
         function typeWriter(element, text, speed = 100) {
             let i = 0;
             element.innerHTML = '';
-            
+
             function type() {
                 if (i < text.length) {
                     element.innerHTML += text.charAt(i);
@@ -2821,13 +3072,13 @@
         window.addEventListener('resize', handleResize);
         window.addEventListener('DOMContentLoaded', handleResize);
 
-        mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.addEventListener('click', function () {
             navLinks.classList.toggle('mobile-active');
         });
 
         // Close mobile menu on link click
         document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 if (window.innerWidth <= 768) {
                     navLinks.classList.remove('mobile-active');
                 }
@@ -2836,7 +3087,7 @@
 
         // Add click tracking for contact links
         document.querySelectorAll('.contact-item a').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 console.log('Contact link clicked:', this.textContent);
             });
         });
@@ -2845,19 +3096,19 @@
         function animateCounter(element, target, duration = 2000) {
             const start = 0;
             const startTime = Date.now();
-            
+
             function updateCounter() {
                 const elapsed = Date.now() - startTime;
                 const progress = Math.min(elapsed / duration, 1);
                 const current = start + (target - start) * progress;
-                
+
                 element.textContent = current.toFixed(2);
-                
+
                 if (progress < 1) {
                     requestAnimationFrame(updateCounter);
                 }
             }
-            
+
             updateCounter();
         }
 
@@ -2968,4 +3219,5 @@
         });
     </script>
 </body>
+
 </html>
